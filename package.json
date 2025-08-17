@@ -6,11 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "check": "biome check --write .",
+    "check": "biome check --unsafe --write .",
     "prepare": "husky"
   },
   "dependencies": {
     "next": "^15.4.6",
+    "next-auth": "5.0.0-beta.29",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
@@ -26,6 +27,6 @@
     "typescript": "^5.9.2"
   },
   "lint-staged": {
-    "*": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
+    "*": "biome check --unsafe --write --no-errors-on-unmatched --files-ignore-unknown=true"
   }
 }
