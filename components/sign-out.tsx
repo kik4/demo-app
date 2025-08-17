@@ -1,6 +1,7 @@
 "use client";
 
 import { signOut } from "next-auth/react";
+import { Button } from "./ui/button";
 
 export default function SignOut() {
   return (
@@ -10,7 +11,7 @@ export default function SignOut() {
         signOut();
       }}
     >
-      <button type="submit">ログアウト</button>
+      <Button type="submit">ログアウト</Button>
     </form>
   );
 }

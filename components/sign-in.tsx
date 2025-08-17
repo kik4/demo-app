@@ -1,4 +1,5 @@
 import { signIn } from "@/auth";
+import { Button } from "./ui/button";
 
 export default function SignIn() {
   return (
@@ -8,7 +9,7 @@ export default function SignIn() {
         await signIn("google");
       }}
     >
-      <button type="submit">Googleでログイン</button>
+      <Button type="submit">Googleでログイン</Button>
     </form>
   );
 }

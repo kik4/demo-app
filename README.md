@@ -11,6 +11,7 @@
 - TailwindCSS
 - Biome
 - NextAuth.js
+- shadcn/ui
 
 ## 開発環境
 
