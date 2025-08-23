@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "check": "biome check --unsafe --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:reset": "docker compose down -v && docker compose up -d"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

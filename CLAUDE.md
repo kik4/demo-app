@@ -12,9 +12,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Code Quality
 - `pnpm check` - Format and lint with Biome (auto-fixes issues)
 
+### Database
+- `pnpm db:up` - Start PostgreSQL with Docker Compose
+- `pnpm db:down` - Stop PostgreSQL containers
+- `pnpm db:reset` - Reset database (removes all data)
+
 ### Environment Setup
-- Copy `.env` to `.env.local` and configure Google OAuth credentials
+- Copy `.env` to `.env.local` and configure Google OAuth and database credentials
 - Run `mise install` to install development tools (Node.js, pnpm)
+- For production, use strong unique database credentials
 
 ## Architecture Overview
 
@@ -34,6 +40,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - TailwindCSS v4 with shadcn/ui design system
 - Custom fonts: Lato (Latin) and Noto Sans JP (Japanese) defined in layout
 - `cn()` utility in `lib/utils.ts` combines clsx and tailwind-merge for className handling
+
+### Database Setup
+- PostgreSQL 16 running in Docker with docker-compose.yml
+- Database connection via DATABASE_URL environment variable
+- Development database: demo_app with user demo_user
+- Credentials configured via environment variables for security
 
 ### File Organization
 - App Router in `app/` directory with layout.tsx and page.tsx pattern
