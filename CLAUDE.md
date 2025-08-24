@@ -17,6 +17,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm db:down` - Stop PostgreSQL containers
 - `pnpm db:reset` - Reset database (removes all data)
 
+### Browser Automation
+- Playwright MCP server available for browser automation tasks
+- Can navigate to URLs, take screenshots, interact with web elements
+- Useful for testing UI components and web scraping tasks
+
 ### Environment Setup
 - Copy `.env` to `.env.local` and configure Google OAuth and database credentials
 - Run `mise install` to install development tools (Node.js, pnpm)
